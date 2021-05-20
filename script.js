@@ -1,15 +1,25 @@
 const toggle = document.getElementById('nav-toggle');
 const nav = document.getElementById('nav-menu');
+const navIcon = document.getElementById('nav-icon');
 const navLinks = document.querySelectorAll('.nav__link');
 const sections = document.querySelectorAll('section[id]');
 
 toggle.addEventListener('click', () => {
   nav.classList.toggle('show-menu');
+  if (navIcon.classList.contains('fa-bars')) {
+    navIcon.classList.remove('fa-bars');
+    navIcon.classList.add('fa-times-circle');
+  } else {
+    navIcon.classList.remove('fa-times-circle');
+    navIcon.classList.add('fa-bars');
+  }
 });
 
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
     nav.classList.remove('show-menu');
+    navIcon.classList.remove('fa-times-circle');
+    navIcon.classList.add('fa-bars');
   });
 });
 
