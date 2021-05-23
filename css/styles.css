@@ -24,8 +24,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  margin: 3rem 0 0 0;
   background-color: #fbfefd;
   color: #707070;
   font-family: "Roboto", sans-serif;
@@ -230,13 +228,13 @@ button {
 }
 
 .home__container {
-  height: calc(100vh - 3rem);
+  margin-top: 6rem;
+  min-height: 100vh;
   -ms-flex-line-pack: center;
       align-content: center;
 }
 
 .home__text {
-  padding-top: 1rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -453,6 +451,12 @@ button {
 }
 
 /* Media Queries */
+@media (max-width: 360px) {
+  .flavor__button {
+    padding: 1rem 1rem;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .home__container,
   .about__container {

@@ -33,8 +33,6 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  margin: 3rem 0 0 0;
   background-color: $body-color;
   color: $text-color;
   font-family: $body-font;
@@ -219,12 +217,13 @@ button {
   pointer-events: none;
 }
 .home__container {
-  height: calc(100vh - 3rem);
+  margin-top: 6rem;
+  min-height: 100vh;
   align-content: center;
 }
 
 .home__text {
-  padding-top: 1rem;
+  // padding-top: 1rem;
   align-self: center;
   text-align: center;
 }
@@ -417,6 +416,12 @@ button {
 }
 
 /* Media Queries */
+@media (max-width: 360px) {
+  .flavor__button {
+    padding: 1rem 1rem;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .home__container,
   .about__container {
